@@ -43,6 +43,11 @@ const programs = [
   },
 ];
 
+async function CopyrightYear() {
+  "use cache";
+  return new Date().getFullYear();
+}
+
 export default function Home() {
   return (
     <>
@@ -403,7 +408,7 @@ export default function Home() {
             <a href="#hero-heading" className="hover:text-white">Back to top</a>
           </nav>
         </div>
-        <p className="pt-6 text-sm text-white/50">© {new Date().getFullYear()} Ghana Chung Do Kwan</p>
+        <p className="pt-6 text-sm text-white/50">© <CopyrightYear /> Ghana Chung Do Kwan</p>
       </div>
     </footer>
     </>
